@@ -8,8 +8,9 @@
   "description": "This is a project to practice using Docker Compose to run a multi-container application in production. Following the Multi-Container Application project from the Backend Developer roadmap from [roadmap.sh](https://roadmap.sh/projects/multi-container-service).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

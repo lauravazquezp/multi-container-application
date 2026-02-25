@@ -1,9 +1,8 @@
+# local development commands
 db-start:
-	@echo "Starting MongoDB..."
 	brew services start mongodb-community
 
 db-stop:
-	@echo "Stopping MongoDB..."
 	brew services stop mongodb-community
 
 db-status:
@@ -13,9 +12,22 @@ install:
 	npm install
 
 run:
-	@echo "Starting the Todo API with nodemon..."
+	@echo "starting the Todo API with nodemon..."
 	npm run dev
 
 clean:
 	rm -rf node_modules
 	npm install
+
+# docker commands
+docker-build:
+	docker compose build
+
+docker-up:
+	docker compose up -d
+
+docker-down:
+	docker compose down
+
+docker-clean:
+	docker-compose down -v
