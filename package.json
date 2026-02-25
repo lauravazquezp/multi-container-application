@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.2"
+  },
+  "name": "multi-container-application",
+  "version": "1.0.0",
+  "description": "This is a project to practice using Docker Compose to run a multi-container application in production. Following the Multi-Container Application project from the Backend Developer roadmap from [roadmap.sh](https://roadmap.sh/projects/multi-container-service).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauravazquezp/multi-container-application.git"
+  },
+  "author": "Laura Vazquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauravazquezp/multi-container-application/issues"
+  },
+  "homepage": "https://github.com/lauravazquezp/multi-container-application#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
