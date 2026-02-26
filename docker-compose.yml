@@ -12,6 +12,7 @@ services:
       - app-network
 
   api:
+    image: lauravazquezp/multi-container-application:latest
     build: .
     container_name: api-container
     ports:
