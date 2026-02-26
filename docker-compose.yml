@@ -1,0 +1,33 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo-container
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: todo-db
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app-network
+
+  api:
+    image: lauravazquezp/multi-container-application:latest
+    build: .
+    container_name: api-container
+    ports:
+      - "3000:3000"
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/todo-db
+      PORT: 3000
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
+volumes:
+  mongo_data:
+
+networks:
+  app-network:
+    driver: bridge
