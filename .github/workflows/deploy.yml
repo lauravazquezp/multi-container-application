@@ -13,5 +13,5 @@ jobs:
 
       - name: Deploy via Docker Compose (using Ansible)
         run: |
-          # We use the Makefile command you just perfected
-          make deploy
+          cd ansible
+          ansible-playbook -i inventory.ini playbook.yml -u ubuntu
